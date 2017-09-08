@@ -3,7 +3,7 @@ const https = require('https');
 // Solution: Use Node.js to connect to Treehouse's API to get profile information to print out
 
 function printMessage(username, badgeCount, points, javascript) {
-  const message = `${username} has ${badgeCount} total badge(s), ${points} total points and ${javascript} points currently in Javascript`;
+  const message = `${username} has ${badgeCount} total badge(s) and ${points} total points with  ${javascript} currently in Javascript`;
   console.log(message);
 }
 
