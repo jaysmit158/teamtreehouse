@@ -21,7 +21,7 @@ function getProfile(username) {
       //Parse the data
       const profile = JSON.parse(body);
       //Print data
-      printMessage(username, profile.badges.length, profile.points.JavaScript);
+      printMessage(username, profile.badges.length, profile.points.total, profile.points.JavaScript);
 
     });
   });
