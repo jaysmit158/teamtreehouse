@@ -18,11 +18,14 @@ function getProfile(username) {
     });
 
     response.on('end', () => {
-      //Parse the data
-      const profile = JSON.parse(body);
-      //Print data
-      printMessage(username, profile.badges.length, profile.points.total, profile.points.JavaScript);
-
+      try {
+        //Parse the data
+        const profile = JSON.parse(body);
+        //Print data
+        printMessage(username, profile.badges.length, profile.points.total, profile.points.JavaScript);
+      } catch (error) {
+        console.error(error.message);
+      }
     });
   });
   request.on('error', error => {
