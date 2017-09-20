@@ -11,7 +11,7 @@ function printMessage(username, badgeCount, points, javascript) {
   const message = `${username} has ${badgeCount} total badge(s) and ${points} total points with ${javascript} currently in Javascript`;
   console.log(message);
 }
-
+//available to be used
 function get(username) {
   try {
     // Connect to the API url (https://teamtreehouse.com/username.json)
@@ -45,3 +45,5 @@ function get(username) {
   }
 
 }
+//api name would be getProfile and that equals the function get
+module.exports.getProfile = get;
